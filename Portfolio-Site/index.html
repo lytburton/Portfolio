@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Lyttia Burton Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="./CSS/portfolio.css">
+        <link rel="shortcut icon" type="image/jpg" href="./Images/L_favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <!--NAVBAR-->
+        <div class="navbar">
+            <ul>
+                <a href="#home" class="centered"><li>Home</li></a>
+                <a href="#about" class="centered"><li>About</li></a>
+                <a href="#github" class="centered"><li>Github</li></a>
+                <a href="#contact" class="centered"><li>Contact</li></a>
+            </ul>
+        </div>
+
+        <!--VIDEO SECTION-->
+        <div class="container">
+            <div id="home" class="video_container">
+                <video autoplay muted loop>
+                    <source src="./Images/typing_resized.mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+    
+            <div class="video_text">
+                <h1 class="centered">Lyttia Burton</h1>
+                <h3 class="centered">Software Developer</h3>
+                <p class="centered">Welcome to my portfolio site! Here you can find out more about my experiences
+                    <br> and training, view samples of my work, and get in contact with me.</p>
+            </div>
+
+        </div>
+        <!--ABOUT SECTION-->
+            <div class="row" id="about">
+                <div class="column_2">
+                    <img src="./Images/code.jpg" alt="Lyttia's Bitmoji" class="img_centered">
+                </div>
+                <div class="column_1">
+                    <h1 class="centered">About</h1>
+                    <p>I am a software developer based in Texas with a passion for coding.
+                        I am also a recent graduate of <strong><a href="https://www.learncodinganywhere.com" target="blank">The Tech Academy's</a></strong> Software Developer Bootcamp.
+                        <br>
+                        <br> 
+                        I have been trained in, and have experience with, the following web and programming languages: HTML, CSS, JavaScript, SQL, C#, and more.
+                        <br>
+                        <br>
+                        If you would like to know more about how I can help with your projects, please feel free to <strong><a href="#contact">Contact</a></strong> me.
+                    </p>
+                </div>
+            </div>
+
+        <!--GITHUB SECTION-->
+        <div class="row" id="github">
+            <div class="column_1">
+                <h1 class="centered">Github</h1>
+                <p class="centered">To view some of the projects I've done, click the link below to access my Github profile.</p>
+                <strong><a href="https://github.com/lytburton" class="centered github" target="blank">Lyttia's Github</a></strong>   
+            </div>
+            <div class="column_2">
+                <img src="./Images/octocat_multi.png" alt="Github Octocat" class="img_centered">
+            </div>
+        </div>
+
+        <!--CONTACT SECTION-->
+        <div class="row" id="contact">
+            <div class="column_2 column_tall">
+                <img src="./Images/computer.jpg" alt="Computer" class="img_centered" width="450" height="350">
+            </div>
+            <div class="column_1 column_tall">
+                <h1 class="centered">Contact</h1>
+                <form>
+                    <label>Name:</label>
+                        <input type="text" name= "Name" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" name="Email" id="email" placeholder="Please enter your name here">
+                    <label>Message:</label>
+                        <input type="text" name="Message" id="Message" placeholder="Please enter your message here">
+                        <input type="submit" value="SUBMIT"> 
+                </form>
+            </div>
+        </div>
+
+        <!--FOOTER-->
+        <footer>
+            <p>This site was created and designed by <strong>Lyttia Burton</strong>&nbsp;&copy;&nbsp;2021</p>
+        </footer>
+    </body>
+</html>

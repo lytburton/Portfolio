@@ -1,0 +1,289 @@
+/*Body*/
+body{
+    background-color: #511E4B;
+    margin: 0%;
+}
+
+/* H1 Elements */
+h1{
+    font-family: 'Cinzel Decorative', cursive, serif;
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-transform: uppercase;
+    margin-top: 3%;
+}
+
+/* H1 Hover Effects */
+h1:hover{
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+/*H3 Element*/
+h3{
+    font-family: 'Cinzel Decorative', cursive, serif;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px black;
+    text-transform: uppercase;
+    margin-top: 1%;
+}
+
+/* Paragraph Elements */
+p{
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: justify;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-shadow: 1px 1px black;
+}
+
+/*Paragraph Hover Effects */
+p:hover{
+    transition: transform 1s;
+    transform: scale(1.01);
+}
+
+/* Center Class */
+.centered{
+    text-align: center;
+    align-items: center;
+}
+/* Anchor Elements */
+a{
+    color: blue;
+    text-shadow: 2px 2px black;
+}
+
+.github{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+
+}
+
+/* Image Elements */
+
+.img_centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+img{
+    filter: grayscale(0.5);
+    border-radius: 8%;
+    max-width: 100%;
+    height: 340px;
+    display: block;
+}
+/* Image Hover Effects */
+img:hover{
+    filter: grayscale(5%);
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 576px){
+    img{
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+/* Footer Element */
+footer{
+    padding: 2%;
+    background-color: rgb(201, 198, 198);
+}
+
+footer p{
+    color: rgb(212, 65, 179);
+    text-align: center;
+}
+
+/****END OF GENERAL STYLING****/
+
+/***NAVBAR STYLING***/
+.navbar{
+    overflow: hidden;
+    background-color: rgba(212, 65, 179, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
+}
+
+.navbar a{
+    float: left;
+    color:white;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 17px;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px black;
+    position: relative;
+    -webkit-animation: moveNavText 5.75s;
+    animation: moveNavText 5.75s;
+}
+
+.navbar a:hover{
+    color: #8946D1;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 576px){
+    .navbar a{
+        width: 25%;
+        font-size: 12px;
+    }
+}
+/***END NAVBAR STYLING***/
+
+/***VIDEO STYLING***/
+
+video{
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+} 
+
+.video_text{
+    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(137, 70, 209, 0.4);
+    color: white;
+    width: 100%;
+    padding: 150px;
+    position: relative;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5.75s;
+}
+
+@media screen and (max-width:576px){
+    video{
+        display: none;
+
+    }
+}
+/***END VIDEO STYLING***/
+
+
+/***TABLE STYLING***/
+*{
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+}
+
+.column_1{
+    flex:50%;
+    height: 400px;
+    background-color: rgba(137, 70, 209, .5);
+}
+
+@media screen and (max-width: 576px){
+    .column1{
+        overflow: auto;
+    }
+}
+
+.column_2{
+    flex: 50%;
+    height: 400px;
+    background-color: white;
+    padding-top: 2.5%;
+}
+
+.column_tall{
+    height: 450px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/***END TABLE STYLING***/
+
+
+/***CONTACT FORM STYLING***/
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/***HOVER EFFECTS FOR INPUT BOXES***/
+input[type=text]:hover{
+    box-shadow: 0 0 5px #00004d inset;
+}
+
+/***END HOVER EFFECTS FOR INPUT BOXES***/
+
+/***SUBMIT BUTTON***/
+input[type=submit]{
+    background-color: rgb(212, 65, 179);
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/***END SUBMIT BUTTON***/
+
+input[type=submit]:hover{
+    background-color: #fff;
+    color: black;
+    transform: scale(1.5);
+    transition: transform 1.5s;
+}
+
+/***SUBMIT BUTTON***/
+
+/***FORM ELEMENT***/
+form{
+    border-radius: 5px;
+    background-color: rgba(137, 70, 209, .5);
+    padding: 0px 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+label{
+    color: white;
+    font-size: 1.3rem;
+}
+/***FORM ELEMENT***/
+
+
+
