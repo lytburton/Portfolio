@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Lyttia Burton Portfolio</title>
+        <title>Lyttia Burton's Portfolio</title>
         <link rel="stylesheet" type="text/css" href="./CSS/portfolio.css">
         <link rel="shortcut icon" type="image/jpg" href="./Images/L_favicon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,14 +11,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&display=swap" rel="stylesheet">
     </head>
     
-    <body>
+    <body class="Background">
         <!--NAVBAR-->
         <div class="navbar">
             <ul>
                 <a href="#home" class="centered"><li>Home</li></a>
+                <a href="#Slideshow">Slideshow</a>
                 <a href="#about" class="centered"><li>About</li></a>
                 <a href="#github" class="centered"><li>Github</li></a>
-                <a href="#contact" class="centered"><li>Contact</li></a>
+                <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
+                <!-- <a href="#contact" class="centered"><li>Contact</li></a> -->
             </ul>
         </div>
 
@@ -39,6 +41,61 @@
             </div>
 
         </div>
+        <!-- SLIDESHOW SECTION -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background">
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/computer2.jpg" alt="computer on a desk">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/programs1.jpg" alt="HTML, CSS, and JavaScript">
+                        <div class="text">I'm a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/programs2.png" alt="Python logo">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/programs3.png" alt="C# and .NET logos">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/programs4.jpg" alt="SQL logo">
+                        <div class="text">back end development, databases, and SQL.</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./Images/computer.jpg" alt="computer">
+                        <div class="text">Contact me now!</div>
+                    </div>
+                    <!-- Previous and Next Buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+
+                </div>
+                <br><!-- Adds a space between the slideshow images and the dots -->
+
+                <!--Slideshow dots-->
+                <div style="text-align: center;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+
+                </div>
+            </div>
+        </div>
+        <!-- END SLIDESHOW SECTION -->
+
         <!--ABOUT SECTION-->
             <div class="row" id="about">
                 <div class="column_2">
@@ -63,15 +120,38 @@
             <div class="column_1">
                 <h1 class="centered">Github</h1>
                 <p class="centered">To view some of the projects I've done, click the link below to access my Github profile.</p>
-                <strong><a href="https://github.com/lytburton" class="centered github" target="blank">Lyttia's Github</a></strong>   
+                <strong><a href="https://github.com/lytburton" class="centered github" target="_blank">Lyttia's Github</a></strong>
+                <p class="centered">You can also get in touch with me on LinkedIn!</p>
+                <strong><a href="https://www.linkedin.com/in/lyttia-burton-934b7611a/" class="centered github" target="_blank">Lyttia's LinkedIn Profile</a></strong>   
             </div>
             <div class="column_2">
                 <img src="./Images/octocat_multi.png" alt="Github Octocat" class="img_centered">
             </div>
         </div>
 
+        <!-- CONTACT FORM -->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/myylbvky" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Type your phone number here" name="phone" required>
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="Type your message here" name="message" required>
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+            </div>
+        </div>
+
+
         <!--CONTACT SECTION-->
-        <div class="row" id="contact">
+        <!-- <div class="row" id="contact">
             <div class="column_2 column_tall">
                 <img src="./Images/computer.jpg" alt="Computer" class="img_centered" width="450" height="350">
             </div>
@@ -87,11 +167,13 @@
                         <input type="submit" value="SUBMIT"> 
                 </form>
             </div>
-        </div>
+        </div> -->
 
         <!--FOOTER-->
         <footer>
             <p>This site was created and designed by <strong>Lyttia Burton</strong>&nbsp;&copy;&nbsp;2021</p>
         </footer>
+
+        <script src="./JS/portfolio.js"></script>
     </body>
 </html>
